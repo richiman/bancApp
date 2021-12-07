@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bancapp-2a60b": {
+      "hosting": {
+        "firebase": [
+          "bancapp-2a60b"
+        ]
+      }
+    }
+  }
+}
