@@ -1,3 +1,22 @@
+======================================
+============#Instrucciones=============
+   Ingresar al siguiente sitio
+https://bancapp-2a60b.web.app/register
+
+1. en el apartado podemos registrar un nuevo cliente
+2. en la ventana podemos ver la lista de los solicitantes
+3. podemos eliminar el cliente o solicitar un credito con el boton de 
+   solicitar 
+4. agregamos la cantidad del solicitante entre 10,000.00 y 100,000,00 
+5. aleatoreamente acepta o deniega la solicitud
+6. si fue aprobado nos mostrara un boton de pago 
+7. caso contrario no nos dara la opcion de eliminar para tener un registro
+
+git link:https://github.com/richiman/bancApp
+
+===============#Gracias================
+======================================
+
 # Firebase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
