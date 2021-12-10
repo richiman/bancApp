@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 // import firebase from 'firebase/';
-import { auth } from 'firebase/app'; 
+import { auth } from 'firebase/app';
 import 'firebase/auth';
 import firebase from '@firebase/app';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class FormComponent implements OnInit {
 
   @Input() action:string;
 
-  email = 'kevin@example.com';
+  email = 'richi@example.com';
   pass = '123456';
 
   constructor(
@@ -24,7 +24,6 @@ export class FormComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.action);
   }
 
   loginWith() {
@@ -35,7 +34,6 @@ export class FormComponent implements OnInit {
   }
   showData(){
     this.auth.user.subscribe( res => {
-      console.log(res);
     });
   }
 
@@ -44,20 +42,17 @@ export class FormComponent implements OnInit {
     .then((user) => {
       // Signed in
       // ...
-      console.log(user);
       this.router.navigate(['profile']);
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorCode,': ',errorMessage);
     });
   }
 
   customLogin(){
     this.auth.auth.signInWithEmailAndPassword(this.email,this.pass)
     .then( res => {
-      console.log(res);
     })
     .catch(err => console.log('Error cl:',err));
   }

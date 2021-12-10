@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ServiceService } from './service/service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { ServiceService } from './service/service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'firebase';
+  title = 'Banco';
 }

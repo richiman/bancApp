@@ -1,11 +1,14 @@
 {
   "targets": {
-    "bancapp-2a60b": {
+    "banca-69ca5": {
       "hosting": {
         "firebase": [
-          "bancapp-2a60b"
+          "banca-69ca5"
         ]
       }
     }
+  },
+  "projects": {
+    "default": "bancapp-2a60b"
   }
 }

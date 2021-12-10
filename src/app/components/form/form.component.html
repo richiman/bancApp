@@ -1,31 +1,27 @@
 <div *ngIf="auth.user | async ; else showLogin">
   <button class="btn btn-danger" (click)="logout()">Logout</button>
 </div>
-
+<div class="container">
 <ng-template #showLogin>
   <div class="col-6 mx-auto">
+    <mat-form-field appearance="fill">
+      <mat-label class="form-control" >Email</mat-label>
+      <input matInput type="text" [(ngModel)]="email">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label class="form-control" >Email</mat-label>
+      <input matInput type="password" [(ngModel)]="pass">
+    </mat-form-field>
+  <br>
 
-    <div class="mb-3 row">
-      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="email" >
-      </div>
-    </div>
-    <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" [(ngModel)]="pass">
-      </div>
-    </div>
-    <div class="d-grid gap-2 d-md-flex" *ngIf="action==='login'" >
-      <button class="btn btn-primary" (click)="loginWith()">Login with Google</button>
-      <button class="btn btn-primary" (click)="customLogin()">Login with Email</button>
+
+    <div class="d-md-flex text-center" *ngIf="action==='login'" >
+      <button mat-raised-button color="primary" routerLink="/register">Registrar</button><br><br>
+      <button mat-mini-fab color="warn" (click)="loginWith()" ><small>google</small></button><br><br>
     </div>
   </div>
 </ng-template>
+</div>
 <br>
 <p></p>
-<div class="d-grid gap-2 d-md-flex">
-  <button class="btn btn-primary" (click)="showData()">Mostrar data</button>
-  <button *ngIf="action==='register'" class="btn btn-primary" (click)="register()">Register</button>
-</div>

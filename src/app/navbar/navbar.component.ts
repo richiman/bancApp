@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +9,11 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  
-  constructor(public auth: AngularFireAuth) { }
+
+  items: Observable<any[]>;
+  constructor(public auth: AngularFireAuth,firestore:AngularFirestore) {
+  this.items=firestore.collection('Banco').valueChanges();
+ }
 
   ngOnInit() {
   }

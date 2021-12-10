@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { firestore } from 'firebase';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-banca',
@@ -7,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BancaComponent implements OnInit {
 
-  dineroDispo: number = 1000000;
 
+  items: Observable<any[]>;
 
-  constructor() { }
+  constructor(firestore:AngularFirestore) {
+    this.items=firestore.collection('Banco').valueChanges();
+   }
 
   ngOnInit() {
   }

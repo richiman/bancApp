@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h1>Solicitud de prestamo</h1>
+  <br>
+<form [formGroup]="createPrestamo"  (ngSubmit)="actualizarmontoSolicitado()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput formControlName="correo" required>
+    </mat-form-field>
+      <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Cedula</mat-label>
+      <input matInput formControlName="cedula" required>
+    </mat-form-field>
+      <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Monto</mat-label>
+      <input matInput formControlName="monto"  required>
+    </mat-form-field>
+      <br>
+    <button mat-raised-button type="submit"  color="primary">Solicitar</button>
+  </form>
+</div>
